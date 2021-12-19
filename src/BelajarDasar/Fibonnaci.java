@@ -35,6 +35,8 @@ public class Fibonnaci {
 
     public static long[] fib_bottom_up(int n) {
         long[] bottom_up = new long[n];
+
+        /*Base Case For Input 1 - 2*/
         if (n == 1) {
             bottom_up[0] = 1;
             return bottom_up;
@@ -44,6 +46,7 @@ public class Fibonnaci {
             return bottom_up;
         }
 
+        /*Set Value For Index Pertama dan Kedua */
         bottom_up[0] = 1;
         bottom_up[1] = 1;
 
@@ -52,7 +55,6 @@ public class Fibonnaci {
                 bottom_up[i] = bottom_up[i - 1] + bottom_up[i - 2];
             }
         }
-
         return bottom_up;
     }
 }
